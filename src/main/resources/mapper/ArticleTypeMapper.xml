@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jayson.blog.mapper.ArticleTypeMapper">
+
+    <resultMap id="BaseResultMap" type="com.jayson.blog.model.entity.ArticleType">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="typeName" column="typeName" jdbcType="VARCHAR"/>
+            <result property="articleNum" column="articleNum" jdbcType="INTEGER"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,typeName,articleNum,
+        createTime,updateTime,isDelete
+    </sql>
+</mapper>
